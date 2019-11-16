@@ -1,12 +1,9 @@
 // 1 . Write a function that takes in a number as input and 
 //recursively finds the sum of all numbers up to and including that number.
 
-const sumOfAll = (num,sum = 0)=>{
-    if (num === 1){
-        return 1
-    }
-    num--
-    return sumOfAll(num) + sum    
+const sumOfAll = (num)=>{
+    if (num === 1) return 1
+    return num + sumOfAll(num - 1)
 }
 console.log(sumOfAll(6))
 
