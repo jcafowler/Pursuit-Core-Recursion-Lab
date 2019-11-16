@@ -14,9 +14,12 @@ console.log(sumOfAll(6))
 // Write a function called `multArr` that takes in an array of 
 //numbers as an argument and recursively multiplies together all of the values 
 //in the array.
-
-
-
+const multArr = (arr) => {
+  if (arr.length === 1) return arr.pop()
+  let el = arr.pop()
+  return multArr(arr) * el
+}
+console.log(multArr([2,3,5]))
 
 
 // Write a function called `concatArr` that takes in an array of strings as an argument and recursively concatenates the strings together into a single string, with spaces between each original string.
